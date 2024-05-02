@@ -1,3 +1,4 @@
+
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Marquee from "@/components/Marquee";
 export default function Page() {
@@ -13,6 +14,7 @@ export default function Page() {
         </div>
       </div>
       <h1 className="font-kleemax">ALL POSTS</h1>
+
     </main>
   );
 }

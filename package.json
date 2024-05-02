@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "contentlayer": "^0.3.4",
     "fitty": "^2.4.2",
     "framer-motion": "^11.1.7",
     "gsap": "^3.12.5",
     "next": "14.2.2",
+    "next-contentlayer": "^0.3.4",
     "next-themes": "^0.3.0",
+    "pliny": "^0.2.1",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -27,5 +30,9 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "overrides": {}
+  "overrides": {
+    "next-contentlayer": {
+      "next": "14.2.2"
+    }
+  }
 }
