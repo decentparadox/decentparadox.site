@@ -1,0 +1,53 @@
+.leading {
+    line-height: 130px;
+  }
+  
+  .wrapper {
+    width: 100%;
+    margin: auto;
+    padding: 16px;
+  }
+  
+  .anim {
+    line-height: 1;
+  }
+  
+  .leadingSmall {
+    line-height: 0;
+  }
+  
+  .leadingLarge {
+    line-height: 0;
+  }
+  
+  .leadingXSmall {
+    line-height: 0;
+  }
+  
+  /* Typography and Animations */
+  #tobefitted {
+    font-family: 'Geist', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  #tobefitted > span {
+    font-family: 'kleemax', sans-serif; /* Ensure this font is correctly included or available */
+    text-transform: uppercase;
+  }
+  
+  /* Custom animations and text clipping styles can be uncommented and adjusted as needed */
+  /* 
+  .anim4 > div > h1 {
+    background: linear-gradient(to right, var(--foreground), var(--accent) 75%);
+    background-size: 300% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  html.dark .anim4 > div > h1 {
+    background: linear-gradient(to right, var(--foreground), var(--accent) 75%);
+  }
+  */
+  

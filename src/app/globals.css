@@ -3,31 +3,142 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground: "#1f2021";
+  --background: "#98C0B5";
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme='dark'],
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground: "#98C0B5";
+    --background: "#1f2021";
   }
-}
 
+@font-face {
+  font-family: "Arame";
+  src: url("../../public/fonts/Arame.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Kleemax";
+  src: url("../../public/fonts/kleemaxdemo.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vaxen";
+  src: url("../../public/fonts/VaxenRoundedVF.ttf") format("truetype");
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: #98C0B5; */
+  font-family: "Arame";
+  /* background: #1f2021; */
 }
-
+.font-kleemax{
+  font-family:"Kleemax" ;
+  text-transform: uppercase;
+}
+.font-vaxen {
+  font-family: "Vaxen";
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.fg-accent{
+  color: #1f2021;
+}
+.fg-primary{
+  color: #916DCF;
+}
+.border-primary{
+  border-color: #1f2021;
+}
+[data-theme='dark'] .border-primary{
+  border-color: #98C0B5;
+}
+[data-theme='dark'] .fg-accent{
+  color: #98C0B5;
+}
+[data-theme='dark'] .fg-primary{
+  color: #916DCF;
+}
+html,
+body {
+  color: #1f2021;
+  background: #98C0B5;
+
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: #98C0B5;
+  background: #1f2021;
+}
+/* For marquee */
+.marquee {
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+
+.marquee__part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.arrow {
+  width: 30px;
+  height: 50px;
+  margin: 0 1em;
+  transform: rotate(90deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  fill: #916DCF;
+  color: #916DCF;
+}
+.arrow svg > path {
+  fill: #916DCF;
+}
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1000vh;
+  content: '';
+  /* you can control opacity of noise  */
+  opacity: 0.01;
+  z-index: 1000;
+  pointer-events: none;
+  background: url("../../public/NoiseLoop.gif");
+}
+
+.arrow.active {
+  transform: rotate(-90deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+[data-theme='dark'], .githubbtn{
+  border-color: #98C0B5;
+}
+
+[data-theme='dark'], .githubbtn:hover{
+  border-color: #98C0B5;
+  background-color: #98C0B5;
+  color: #1f2021;
+}
+.githubbtn{
+  border-color: #1f2021;
+}
+.githubbtn:hover{
+  border-color: #1f2021;
+  background-color: #1f2021;
+  color: #98C0B5;
 }
