@@ -10,6 +10,44 @@ import Project5Img from "public/about/img5.jpeg";
 const Home = () => {
   return (
     <div className="Home relative">
+      
+      <section className="about">
+        <div className="about-container">
+          <div className="about-col">
+            <p>(about me)</p>
+            <p>
+              Hey, I'm Sasank Reddy, also known as "decentparadox." I'm
+              currently a student pursuing a degree in Computer Science with a
+              focus on Artificial Intelligence at Amrita School of Engineering,
+              Bangalore. During the day, I work as a graphic and UI/UX designer,
+              and I've got two years of experience under my belt. I'm also into
+              tech stuff like reverse engineering, game hacking, and web
+              development. On weekends, you'll find me diving into Capture The
+              Flag (CTF) challenges.
+              
+              I'm all about learning and growth. My goal
+              is to become a versatile problem solver, so I'm constantly
+              improving my skills in areas like blockchain, app development,
+              machine learning, and networking. I believe in being well-prepared
+              before taking on any projects. When I'm not busy with tech, I love
+              reading books and manga. It's my way of staying creative and
+              inspired. I don't limit myself to one industry; I'm ready to adapt
+              and take on new challenges. While I don't have a fancy mission
+              statement, my passion for learning and mastering new skills drive
+            </p>
+          </div>
+          <div className="about-col">
+            <div className="socials">
+              <a href="mailto:rsasank69@gmail.com">email &#8599;</a>
+              <a href="tg://resolve?domain=decentparadox">telegram &#8599;</a>
+              <a href="https://www.linkedin.com/in/sasank-reddy-thirumuru/">
+                linkedin &#8599;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <div className="projects-nav">
         <div className="projects-nav-container">
           <div className="project-item">
@@ -100,43 +138,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <section className="about">
-        <div className="about-container">
-          <div className="about-col">
-            <p>(about me)</p>
-            <p>
-              Hey, I'm Sasank Reddy, also known as "decentparadox." I'm
-              currently a student pursuing a degree in Computer Science with a
-              focus on Artificial Intelligence at Amrita School of Engineering,
-              Bangalore. During the day, I work as a graphic and UI/UX designer,
-              and I've got two years of experience under my belt. I'm also into
-              tech stuff like reverse engineering, game hacking, and web
-              development. On weekends, you'll find me diving into Capture The
-              Flag (CTF) challenges.
-              
-              I'm all about learning and growth. My goal
-              is to become a versatile problem solver, so I'm constantly
-              improving my skills in areas like blockchain, app development,
-              machine learning, and networking. I believe in being well-prepared
-              before taking on any projects. When I'm not busy with tech, I love
-              reading books and manga. It's my way of staying creative and
-              inspired. I don't limit myself to one industry; I'm ready to adapt
-              and take on new challenges. While I don't have a fancy mission
-              statement, my passion for learning and mastering new skills drive
-            </p>
-          </div>
-          <div className="about-col">
-            <div className="socials">
-              <a href="mailto:rsasank69@gmail.com">email &#8599;</a>
-              <a href="tg://resolve?domain=decentparadox">telegram &#8599;</a>
-              <a href="https://www.linkedin.com/in/sasank-reddy-thirumuru/">
-                linkedin &#8599;
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <div className="footer">
         <div className="divider"></div>

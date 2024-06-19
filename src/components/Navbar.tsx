@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import React,  { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -22,11 +22,7 @@ export default function Navbar({ pageTitle }: { pageTitle: string }) {
     const scales = [0.81, 0.84, 0.87, 0.9];
 
     const openMenu = () => {
-      const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+      setIsOpen(true);
       gsap.to('.menu', {
         clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
         pointerEvents: 'all',
