@@ -42,6 +42,22 @@ body {
     text-wrap: balance;
   }
 }
+[data-theme='dark'] #aboutimg-light {
+  display: none;
+}
+
+[data-theme='dark']  #aboutimg-dark {
+  display: block;
+}
+
+[data-theme='light'] #aboutimg-light {
+  display: block;
+}
+
+[data-theme='light'] #aboutimg-dark {
+  display: none;
+}
+
 
 .fg-accent{
   color: #1f2021;
@@ -141,4 +157,7 @@ body {
   border-color: #1f2021;
   background-color: #1f2021;
   color: #98C0B5;
+}
+.no-scroll{
+  overflow: hidden;
 }

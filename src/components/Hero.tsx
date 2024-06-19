@@ -1,21 +1,11 @@
 import Bordered from "@/components/Layouts/Bordered";
 import Link from "next/link";
-import ThemeSwitch from "./ThemeSwitch";
-import Marquee from "./Marquee";
 import Image from "next/image";
+import Navbar from "./Navbar";
 export default function Hero() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4">
-      <div className="w-full flex justify-between items-center">
-        <div className="w-[35%] flex justify-start ">Folio 2k24</div>
-        <div className="w-[30%] flex justify-center ">
-          <Marquee />
-        </div>
-        <div className="w-[35%] flex justify-end ">
-          {" "}
-          <ThemeSwitch />
-        </div>
-      </div>
+      <Navbar pageTitle={"Folio 2k24"} />
       <div className="w-full  h-auto overflow-hidden">
         <Bordered>
           <div className="h-[300px]">
@@ -23,7 +13,7 @@ export default function Hero() {
               <h1 className="absolute font-vaxen xl:text-[240px] 2xl:text-[300px] md:text-[150px] sm:text-[124px] text-[82px]  fg-primary">
                 2024
               </h1>
-              <p className="z-10 font-kleemax xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
+              <p className="z-[2] font-kleemax xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
                 DECENTPARADOX
               </p>
             </div>
@@ -59,6 +49,7 @@ export default function Hero() {
               height={0}
               style={{ width: "auto", height: "32px" }}
               alt="keepScrolling"
+              
             />
           </div>
 

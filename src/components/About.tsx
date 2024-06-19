@@ -1,14 +1,21 @@
 "use client"
 import { useEffect } from 'react';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import fitty from "fitty"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger";
-import styles from './About.module.css'; // Assuming you have your styles in this CSS module
-
-// const DesignSlider = dynamic(() => import('./DesignSlider'));
-
+//@ts-ignore
+const FitWrap = ({children}) =>{
+  return (
+    <div className={`m-auto w-100 py-4 `}>
+    <div>
+      <h1 id="tobefitted">{children}</h1>
+    </div>
+  </div>
+  )
+}
 const DesignerComponent = () => {
   useEffect(() => {
 
@@ -31,39 +38,13 @@ const DesignerComponent = () => {
   }, []);
 
   return (
-    <>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Geist&display=swap" rel="stylesheet" />
-      </Head>
-      <section className={styles.leading}>
-        <div className={`${styles.wrapper} ${styles.anim}`}>
-          <div>
-            <h1 id="tobefitted">Bangalore <span>-</span> based</h1>
-          </div>
-        </div>
-        <div className={`${styles.wrapper} ${styles.leadingSmall}`}>
-          <div>
-            <h1 id="tobefitted">designer <span>&</span> developer</h1>
-          </div>
-        </div>
-        <div className={`${styles.wrapper} ${styles.leading}`}>
-          <div>
-            <h1 id="tobefitted"><span> ਂ </span> crafting <span>digital</span> marvels</h1>
-          </div>
-        </div>
-        {/* <DesignSlider /> */}
-        <div className={`${styles.wrapper} ${styles.leadingLarge}`}>
-          <div>
-            <h1 id="tobefitted">designs <span> that ↑</span> i made <span>♥</span></h1>
-          </div>
-        </div>
-        <div className={`${styles.wrapper} ${styles.leadingXSmall}`}>
-          <div>
-            <h1 id="tobefitted">and projects that iam really <span> proud ↭ </span> of</h1>
-          </div>
-        </div>
+      <section className="leading-8 m-8">
+        <FitWrap>Bangalore - based</FitWrap>
+        <FitWrap>designer & developer</FitWrap>
+        <FitWrap> ਂ crafting digital marvels</FitWrap>
+        <FitWrap>DESIGNS THAT ↑ I MADE WITH ♥</FitWrap>
+        <FitWrap>AND PROJECTS THAT IAM REALLY PROUD ↭ OF</FitWrap>
       </section>
-    </>
   );
 };
 

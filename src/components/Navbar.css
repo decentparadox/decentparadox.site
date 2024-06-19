@@ -1,0 +1,119 @@
+.logo {
+    width: 24px;
+  }
+  
+  .menu-open,
+  .menu-close {
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    padding: 1.5em;
+    width: 100vw;
+    height: 100vh;
+    background: #1f2021;
+    color: #fff;
+    display: flex;
+    gap: 1.5em;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+  .menu-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu-img {
+    position: relative;
+    flex: 3;
+    overflow: hidden;
+  }
+  
+  .menu-items {
+    position: relative;
+    top: 0px;
+    flex: 1;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -1;
+  }
+  
+  .menu-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #img-1 {
+    opacity: 0.9;
+  }
+  
+  #img-2 {
+    opacity: 0.7;
+  }
+  
+  #img-3 {
+    opacity: 0.5;
+  }
+  
+  #img-4 {
+    opacity: 0.3;
+  }
+  
+  .menu-logo {
+    width: 48px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .menu-logo img {
+    position: relative;
+  }
+  
+  .menu-link p {
+    position: relative;
+    font-family: "Saans TRIAL";
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .menu-link a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu-footer {
+    width: 100%;
+    display: flex;
+  }
+  
+  .menu-sub-col {
+    flex: 1;
+  }
+  
+  .menu-sub-item p {
+    position: relative;
+  }
+  
+  .menu-link,
+  .menu-sub-item {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  @media (max-width: 900px) {
+    .menu-img {
+      display: none;
+    }
+  }

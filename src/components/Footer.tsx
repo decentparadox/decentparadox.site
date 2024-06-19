@@ -41,7 +41,7 @@ const Footer = () => {
 
 const Home = () => {
   return (
-    <section>
+    <section className="p-4">
       <Footer />
       <div className="w-full py-[60px] ">
         {/* <div className="bordered"> */}
@@ -51,7 +51,7 @@ const Home = () => {
               <h1 className="absolute font-vaxen xl:text-[240px] 2xl:text-[300px] md:text-[150px] sm:text-[124px] text-[82px]  fg-primary">
                 DDOX
               </h1>
-              <p className="z-10 font-kleemax xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
+              <p className="z-[2] font-kleemax xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
                 SASANK REDDY
               </p>
             </div>
