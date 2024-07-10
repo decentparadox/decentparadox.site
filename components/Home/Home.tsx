@@ -5,7 +5,7 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import LoadingScreen from "../LoadingScreen";
 import { useState, useEffect } from 'react';
-export default function () {
+export default function Home () {
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(() => {

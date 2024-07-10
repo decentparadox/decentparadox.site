@@ -12,7 +12,7 @@ import type { Authors, Blog } from 'contentlayer/generated'
 import { Toc } from 'pliny/mdx-plugins'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode } from 'react'
 
 interface LayoutProps {
     content: CoreContent<Blog>
@@ -33,30 +33,7 @@ export default function PostLayout({
 }: LayoutProps) {
     const { path, slug, tags, date, title, thumbnail } = content
     const displayThumbnail = thumbnail || '/static/images/twitter-card.png'
-    const [pageViews, setPageViews] = useState({
-        isLoading: true,
-        count: null,
-    })
 
-    useEffect(() => {
-        if (slug) {
-            fetch(`/api/page-views?slug=${encodeURIComponent(slug)}`)
-                .then((response) => response.json())
-                .then((data) => {
-                    setPageViews({
-                        isLoading: false,
-                        count: data.pageViewCount.toLocaleString(),
-                    })
-                })
-                .catch((error) => {
-                    console.error('Error fetching page views:', error)
-                    setPageViews({
-                        isLoading: false,
-                        count: null,
-                    })
-                })
-        }
-    }, [slug])
 
     return (
         <>
@@ -83,15 +60,6 @@ export default function PostLayout({
                                 <div>
                                     <dt className="sr-only">Published on</dt>
                                     <dd className="flex items-center justify-center text-base font-medium leading-6 text-muted-foreground">
-                                        {pageViews.isLoading ? (
-                                            <span className="flex items-center justify-center gap-2">
-                                                <Skeleton className="h-6 w-12" />
-                                                <span> views</span>
-                                            </span>
-                                        ) : pageViews.count !== null ? (
-                                            <span>{pageViews.count} views</span>
-                                        ) : null}
-                                        <span className="mx-2">・</span>
                                         <time dateTime={date}>
                                             {formatDate(date, siteMetadata.locale)}
                                         </time>

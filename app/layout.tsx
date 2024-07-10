@@ -1,5 +1,4 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from '@vercel/analytics/react'

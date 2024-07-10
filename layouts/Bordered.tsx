@@ -1,4 +1,4 @@
-export default function ({ children }: { children: React.ReactNode }) {
+export default function Boredered ({ children }: { children: React.ReactNode }) {
   return (
     <div className="self-stretch flex flex-col items-center justify-start gap-[18px]">
       <div className="self-stretch relative h-px">

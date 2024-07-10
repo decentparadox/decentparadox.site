@@ -13,7 +13,7 @@ import NextImage from 'next/image'
 import { Toc } from 'pliny/mdx-plugins'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode} from 'react'
 
 interface LayoutProps {
     content: CoreContent<Blog>
@@ -33,34 +33,6 @@ export default function PostBare({
     children,
 }: LayoutProps) {
     const { path, slug, tags, date, title, thumbnail } = content
-    const displayThumbnail = thumbnail ? thumbnail : '/static/images/twitter-card.png'
-    const [isLoading, setIsLoading] = useState(true)
-    const [pageViews, setPageViews] = useState({
-        isLoading: true,
-        count: null,
-    })
-
-    useEffect(() => {
-        setPageViews((prev) => ({ ...prev, isLoading: true }))
-        if (slug) {
-            fetch(`/api/page-views?slug=${encodeURIComponent(slug)}`)
-                .then((response) => response.json())
-                .then((data) => {
-                    setPageViews({
-                        isLoading: false,
-                        count: data.pageViewCount.toLocaleString(),
-                    })
-                })
-                .catch((error) => {
-                    console.error('Error fetching page views:', error)
-                    setPageViews({
-                        isLoading: false,
-                        count: null,
-                    })
-                })
-        }
-    }, [slug])
-
     return (
         <>
             <ScrollTopAndComment />

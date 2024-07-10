@@ -6,9 +6,9 @@ const Marquee = () => {
   useEffect(() => {
     let currentScroll = 0;
     let isScrollingDown = true;
-    let arrows = document.querySelectorAll(".arrow");
+    const arrows = document.querySelectorAll(".arrow");
   
-    let tween = gsap
+    const tween = gsap
       .to(".marquee__part", {
         xPercent: -100,
         repeat: -1,
