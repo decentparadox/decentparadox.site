@@ -1,15 +1,15 @@
-
+'use client'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from '@vercel/analytics/react'
 import 'css/tailwind.css'
+import { ReactLenis } from '@studio-freight/react-lenis'
 import { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import { SearchConfig, SearchProvider } from 'pliny/search'
 import 'pliny/search/algolia.css'
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
-
 import './globals.css'
 import { ThemeProviders } from './theme-providers'
 
@@ -93,9 +93,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ThemeProviders>
                     <Analytics />
                     <SectionContainer>
-                        <div className="box-border flex h-full flex-col  font-sans">
+                        <div className="noise box-border flex h-full flex-col font-sans">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                                <main className="">{children}</main>
+                                    {children}
                             </SearchProvider>
                         </div>
                     </SectionContainer>

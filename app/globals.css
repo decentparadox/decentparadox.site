@@ -360,3 +360,16 @@ body {
 .font-arame {
     font-family: 'Arame';
 }
+.noise::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 1000vh;
+    content: '';
+    /* you can control opacity of noise  */
+    opacity: 0.02;
+    z-index: 1000;
+    pointer-events: none;
+    background: url("/static/images/noise.gif");
+  }
