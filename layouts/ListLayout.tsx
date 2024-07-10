@@ -79,10 +79,8 @@ export default function ListLayoutWithTags({
     <>
       <div className='w-[calc(100vw-120px)] ml-[calc(-50vw+50%+60px)] mt-[calc(-100px)] font-arame'>
         <div className="pb-6 pt-6">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {title}
-          </h1>
         </div>
+        <h1 className='font-kleemax text-[#98C0B5] text-2xl'>All Posts</h1>
         <div className="flex sm:space-x-24">
           <div>
             <ul>

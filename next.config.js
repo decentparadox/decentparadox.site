@@ -69,6 +69,7 @@ module.exports = () => {
                 'avatars.githubusercontent.com',
                 'pbs.twimg.com',
                 'i.scdn.co',
+                'i.imgur.com',
                 'api.lanyard.rest',
                 'cdn.discordapp.com',
             ],

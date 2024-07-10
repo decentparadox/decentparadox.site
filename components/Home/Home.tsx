@@ -18,7 +18,7 @@ export default function Home () {
       return <LoadingScreen />;
     }
     return (
-        <div className="divide-accent-foreground dark:divide-accent text-[#98C0B5]">
+        <div className="divide-accent-foreground dark:divide-accent text-[#98C0B5] font-arame">
             <Hero />
             <About />
             <Projects />

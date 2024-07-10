@@ -55,7 +55,7 @@ const Home = () => {
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
-                    <img src="../kalser.png" alt="" />
+                    <img src="static/images/kalser.png" alt="" />
                   </div>
                   <div className="project-name">
                     <h2>Kalser</h2>
@@ -77,7 +77,7 @@ const Home = () => {
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
-                    <img src="../evanix.png" alt="" />
+                    <img src="static/images/evanix.png" alt="" />
                   </div>
                   <div className="project-name">
                     <h2>Eva 01 nix</h2>
@@ -99,7 +99,7 @@ const Home = () => {
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
-                    <img src="../orca.png" alt="" />
+                    <img src="static/images/orca.png" alt="" />
                   </div>
                   <div className="project-name">
                     <h2>Orca</h2>
@@ -120,7 +120,7 @@ const Home = () => {
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
-                    <img src="../bi0s.png" alt="" />
+                    <img src="static/images/bi0s.png" alt="" />
                   </div>
                   <div className="project-name">
                     <h2>bi0s Meetups</h2>

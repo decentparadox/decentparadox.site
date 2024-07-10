@@ -133,7 +133,7 @@ export default function PostLayout({
                             </div>
                         </div>
                         <footer>
-                            <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
+                            <div className="flex flex-col font-arame text-[#916DCF]/75 text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
                                 {prev && prev.path && (
                                     <div className="pt-4 xl:pt-8">
                                         <Link
