@@ -1,14 +1,14 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-    title: 'enscribe.dev',
-    author: 'enscribe',
-    headerTitle: 'enscribe.dev',
+    title: 'DecentParadox | Sasank Reddy | Portfolio',
+    author: 'decentparadox',
+    headerTitle: 'decentparadox.site',
     description: 'Freelance frontend web development and cybersecurity shenanigans',
     language: 'en-us',
     theme: 'dark', // system, dark or light
-    siteUrl: 'https://enscribe.dev',
-    siteRepo: 'https://github.com/jktrn/enscribe.dev',
-    siteLogo: '/static/images/logo.png',
+    siteUrl: 'https://decentparadox.site',
+    siteRepo: 'https://github.com/decentparadox/portfolio',
+    siteLogo: '/static/images/logoAccent.svg',
     socialBanner: '/static/images/twitter-card.png',
     // mastodon: 'https://mastodon.social/@mastodonuser',
     email: 'jason@enscribe.dev',

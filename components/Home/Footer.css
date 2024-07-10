@@ -1,0 +1,53 @@
+button {
+    position: relative;
+    background: none;
+    outline: none;
+    border: 1px solid ;
+    border-radius: 0.25em;
+    font-size: 17px;
+    color: var(--foreground);
+    font-family: "Geist";
+    padding: 0.25em 0.75em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 2;
+  }
+
+
+  button:hover::after {
+    width: 100%;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10em 4em 4em 4em;
+  }
+
+  footer > div {
+    flex: 1;
+  }
+
+  .slide-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  .slide-info > div {
+    flex: 1;
+  }
+
+  .slide-name p {
+    font-size: 42px;
+    padding: 0.5em 0 1.5em 0;
+  }
+
+  .year p:nth-child(1),
+  .agency p:nth-child(1),
+  .role p:nth-child(1),
+  .awards p:nth-child(1) {
+    margin-bottom: 2em;
+  }

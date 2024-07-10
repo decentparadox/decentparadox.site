@@ -4,8 +4,8 @@
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
+        --background: #98C0B5;
+        --foreground: #1f2021;
 
         --card: 0 0% 100%;
         --card-foreground: 0 0% 3.9%;
@@ -39,8 +39,8 @@
     }
 
     .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
+        --background: #1f2021;
+        --foreground: #98C0B5;
 
         --card: 0 0% 3.9%;
         --card-foreground: 0 0% 98%;
@@ -298,9 +298,9 @@
         @apply z-[2];
     }
 
-    .bg-primary-600 {
+    /* .bg-primary-600 {
         @apply !bg-primary/25;
-    }
+    } */
 
     .bg-gray-300\/50 .overflow-hidden.rounded-2xl.border.border-gray-100 {
         @apply rounded-lg border-border bg-background;
@@ -331,4 +331,32 @@
     .my-6.rounded-lg.p-4.bg-secondary.text-center ul {
         @apply m-0;
     }
+}
+@font-face {
+    font-family: "Arame";
+    src: url("../public/static/fonts/Arame.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Kleemax";
+    src: url("../public/static/fonts/kleemaxdemo.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "Vaxen";
+    src: url("../public/static/fonts/VaxenRoundedVF.ttf") format("truetype");
+  }
+
+body {
+  /* color: #98C0B5; */
+  font-family: "Arame";
+  /* background: #1f2021; */
+}
+.font-kleemax{
+  font-family:"Kleemax" ;
+  text-transform: uppercase;
+}
+.font-vaxen {
+  font-family: "Vaxen";
+}
+.font-arame {
+    font-family: 'Arame';
 }

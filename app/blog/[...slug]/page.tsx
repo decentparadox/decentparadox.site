@@ -114,6 +114,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
             />
             <ReportView slug={slug} />
             <Layout
+                className="font-arame"
                 content={mainContent}
                 authorDetails={authorDetails}
                 toc={post.toc}

@@ -1,0 +1,162 @@
+.logo {
+    width: 24px;
+  }
+  
+  .menu-open,
+  .menu-close {
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    color: var(--foreground);
+    display: flex;
+    gap: 1.5em;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    z-index: 3;
+    pointer-events: none;
+  }
+  [data-theme='dark'],.menu{
+    background: #1f2021;
+  }
+
+  [data-theme='light'],.menu{
+    background: "#98C0B5";
+  }
+  .menu-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu-img {
+    position: relative;
+    flex: 3;
+    overflow: hidden;
+  }
+  
+  .menu-items {
+    position: relative;
+    top: 0px;
+    flex: 1;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -1;
+  }
+  
+  .menu-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #img-1 {
+    opacity: 0.9;
+  }
+  
+  #img-2 {
+    opacity: 0.7;
+  }
+  
+  #img-3 {
+    opacity: 0.5;
+  }
+  
+  #img-4 {
+    opacity: 0.3;
+  }
+  
+  .menu-logo {
+    width: 48px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .menu-logo img {
+    position: relative;
+  }
+  
+  .menu-link p {
+    position: relative;
+    font-family: "Saans TRIAL";
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .menu-link a {
+    text-decoration: none;
+    color: var(--foreground);
+  }
+  
+  .menu-footer {
+    width: 100%;
+    display: flex;
+  }
+  
+  .menu-sub-col {
+    flex: 1;
+  }
+  
+  .menu-sub-item p {
+    position: relative;
+  }
+  
+  .menu-link,
+  .menu-sub-item {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  @media (max-width: 900px) {
+    .menu-img {
+      display: none;
+    }
+  }
+  /* For marquee */
+.marquee {
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.marquee__inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+
+.marquee__part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.arrow {
+  width: 30px;
+  height: 50px;
+  margin: 0 1em;
+  transform: rotate(90deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  fill: #916DCF;
+  color: #916DCF;
+}
+.arrow svg > path {
+  fill: #916DCF;
+}
+.arrow.active {
+  transform: rotate(-90deg);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}

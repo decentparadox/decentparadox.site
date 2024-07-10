@@ -64,8 +64,8 @@ export default function PostLayout({
             <article>
                 <div>
                     <header>
-                        <div className="space-y-1 border-b border-muted-foreground pb-10 text-center dark:border-muted">
-                            <div className="w-full">
+                        <div className="font-arame space-y-1 border-b border-muted-foreground pb-10 text-center dark:border-muted">
+                            {/* <div className="w-full">
                                 <div className="relative -mx-6 mt-6 md:-mx-8">
                                     <div className="relative aspect-[1.91/1] w-full rounded-md">
                                         <Image
@@ -78,7 +78,7 @@ export default function PostLayout({
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <dl className="relative pt-10">
                                 <div>
                                     <dt className="sr-only">Published on</dt>
@@ -161,7 +161,7 @@ export default function PostLayout({
                                 <div className="toc not-prose">
                                     <TOCInline toc={toc} />
                                 </div>
-                                <div>{children}</div>
+                                <div className='font-arame'>{children}</div>
                             </div>
                         </div>
                         <footer>

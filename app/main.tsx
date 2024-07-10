@@ -1,9 +1,9 @@
-import BentoBox from '@/components/bento/BentoBox'
-
-export default function Home({ posts }) {
+import Home from '@/components/Home/Home'
+export default function () {
     return (
-        <div className="divide-y divide-accent-foreground dark:divide-accent">
-            <BentoBox posts={posts} />
+        <div className=" divide-accent-foreground dark:divide-accent">
+            {/* <BentoBox posts={posts} /> */}
+            <Home />
         </div>
     )
 }
