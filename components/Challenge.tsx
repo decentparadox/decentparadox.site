@@ -39,7 +39,7 @@ const Challenge = ({
 }) => {
     const [userAvatars, setUserAvatars] = useState({})
     const usernameMapping = {
-        jktrn: 'enscribe',
+        decentparadox: 'decentparadox',
     }
 
     useEffect(() => {
