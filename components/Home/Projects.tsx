@@ -12,7 +12,7 @@ const Home = () => {
     <div className="w-[calc(100vw-20px)] ml-[calc(-50vw+50%+10px)] relative w-100 overflow-x-hidden pt-[2em] px-[16px]">
       
       <section className="mt-16 my-0 w-100 pt-[10rem]">
-        <div className="w-[75%] ml-auto flex gap-[10rem]">
+        <div className="w-full md:w-[75%] ml-auto flex gap-[10rem]">
           <div className="about-col">
             <p>(about me)</p>
             <p>
@@ -36,7 +36,7 @@ const Home = () => {
               statement, my passion for learning and mastering new skills drive
             </p>
           </div>
-          <div className="about-col">
+          <div className="about-col hidden md:block">
             <div className="flex flex-col">
               <a href="mailto:rsasank69@gmail.com">email &#8599;</a>
               <a href="tg://resolve?domain=decentparadox">telegram &#8599;</a>

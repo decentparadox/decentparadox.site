@@ -20,7 +20,8 @@ const DesignerComponent = () => {
   useEffect(() => {
 
     const to_be_fitted = document.querySelectorAll("#tobefitted");
-    fitty("#tobefitted");
+    var fitties = fitty("#tobefitted");
+    fitties[0].fit({ sync: true });
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".anim4 div h1", {
