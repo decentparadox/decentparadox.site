@@ -345,6 +345,11 @@
     src: url("../public/static/fonts/VaxenRoundedVF.ttf") format("truetype");
   }
 
+  @font-face {
+    font-family: "Mission";
+    src: url("../public/static/fonts/mission-control.otf") format("opentype");
+  }
+
 body {
   /* color: #98C0B5; */
   font-family: "Arame";
@@ -357,8 +362,11 @@ body {
 .font-vaxen {
   font-family: "Vaxen";
 }
-.font-arame {
+/* .font-arame {
     font-family: 'Arame';
+} */
+.font-arame {
+    font-family: "Mission";
 }
 .noise::before {
     position: fixed;

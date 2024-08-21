@@ -98,7 +98,7 @@ export default function ListLayoutWithTags({
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-[#98C0B5]/100 ">
+                            <Link href={`/${path}`} className="text-gray-900 dark:text-[#98C0B5]/100 uppercase">
                               {title}
                             </Link>
                           </h2>
