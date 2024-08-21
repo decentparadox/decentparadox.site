@@ -21,7 +21,7 @@ const DesignerComponent = () => {
   useEffect(() => {
 
     const to_be_fitted = document.querySelectorAll("#tobefitted");
-    var fitties = fitty("#tobefitted");
+    const fitties = fitty("#tobefitted");
     // fitties[0].fit({ sync: true });
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollTrigger);
