@@ -27,7 +27,7 @@ const DesignerComponent = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const split = new SplitType("#about-col p", {
-  types: "words, chars",
+  types: "words,chars",
 });
 
 gsap
