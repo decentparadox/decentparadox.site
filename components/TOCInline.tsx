@@ -138,7 +138,7 @@ const TOCInline = ({
         <div className='font-arame'>
             {!asDisclosure && (
                 <div
-                    className={`pb-2 pt-2 text-base font-bold text-[#916dcf] ${
+                    className={`pb-2 pt-2 text-base font-bold text-accent ${
                         rightAlign ? 'mr-6 text-right' : 'ml-6'
                     }`}
                 >
@@ -154,7 +154,7 @@ const TOCInline = ({
                     >
                         Table of Contents
                     </summary>
-                    <div className={`text-[#98C0B5]/100 ${rightAlign ? 'mr-6' : 'ml-6'}`}>{createList(nestedList)}</div>
+                    <div className={`text-foreground/100 ${rightAlign ? 'mr-6' : 'ml-6'}`}>{createList(nestedList)}</div>
                 </details>
             ) : (
                 createList(nestedList)

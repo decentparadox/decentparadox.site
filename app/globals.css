@@ -40,7 +40,7 @@
 
     .dark {
         --background: #1f2021;
-        --foreground: #98C0B5;
+        --foreground: #9CADA6;
 
         --card: 0 0% 3.9%;
         --card-foreground: 0 0% 98%;
@@ -60,7 +60,7 @@
         --muted: 0 0% 14.9%;
         --muted-foreground: 0 0% 63.9%;
 
-        --accent: 0 0% 14.9%;
+        --accent: "E9EAE2";
         --accent-foreground: 0 0% 98%;
 
         --destructive: 0 62.8% 30.6%;
@@ -376,7 +376,7 @@ body {
     height: 1000vh;
     content: '';
     /* you can control opacity of noise  */
-    opacity: 0.02;
+    opacity: 0.007;
     z-index: 1000;
     pointer-events: none;
     background: url("/static/images/noise.gif");

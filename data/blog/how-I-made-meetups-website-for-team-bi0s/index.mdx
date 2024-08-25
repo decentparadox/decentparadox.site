@@ -1,0 +1,29 @@
+---
+title: "How I Built a website for Meetup Pages Organized by India's #1 CTF and Cybersecurity Research Team"
+date: '2024-08-22'
+lastmod: '2023-08-22'
+tags: ['bi0s', 'meetups', 'dev']
+summary: "Design and Development decisions that i took while making this website"
+authors: ['decentparadox']
+layout: PostLayout
+---
+
+## Intro
+
+bi0s Cybersecurity Meetup, commonly known as bi0s Meetups, is a monthly event organized by team bi0s, India’s top CTF team. I had the chance to build the entire design system and website for these meetups, enabling participants to register directly through the site. The project is still ongoing, as I’ve been solely responsible for it due to our limited manpower—most of the team was busy coordinating speakers and venues, so I didn’t want to burden them with extra work for a single meetup page.
+
+We held our first three meetups on campus, driven by the ambition to grow bigger. Our first meetup outside of college was hosted at Flipkart’s office, featuring a talk by Flipkart’s CISO. That’s when we realized it was time to step up our game. I created a design scheme that everyone thought was really cool, and we decided to carry this theme throughout our entire meetup calendar moving forward.
+
+![Design Scheme](/static/images/bi0s-meetups/designScheme.png)
+### website design
+
+We all agreed to maintain the same theme across the entire website. It took me nearly a week to finalize the design, develop the site, and figure out what content to include. Since this was my first major project, I want to write a blog about how I made it happen.
+
+The entire website was rewritten twice. Initially, I built it using Astro, but since it's a niche framework, I realized it might be difficult for others to manage the site after me. So, I rewrote it in Next.js. This was also the first website I built completely from scratch, without using any templates or themes.
+<CodeBlock
+    src="bi0s-meetups/meetup-slug"
+    language="typescript"
+    scrollable
+    fileName="src/main.ts"
+    title="Main Meetup Page"
+/>

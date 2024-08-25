@@ -1,0 +1,10 @@
+"use client";
+import meetups from "@/data/meetups.json";
+export default function Page({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
+  const currentMeetup = (meetups.meetups as Meetups)[slug];
+  return (
+    <>
+    </>
+    )
+}

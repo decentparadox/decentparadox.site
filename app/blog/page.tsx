@@ -2,7 +2,8 @@ import ListLayout from '@/layouts/ListLayout'
 import { genPageMetadata } from 'app/seo'
 import { allBlogs } from 'contentlayer/generated'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-
+import Navbar from '@/components/Home/Navbar/Navbar'
+import Footer from "@/components/Home/Footer"
 const POSTS_PER_PAGE = 100
 
 export const metadata = genPageMetadata({ title: 'Blog' })
@@ -20,11 +21,15 @@ export default function BlogPage() {
     }
 
     return (
+        <div className='w-full divide-accent-foreground dark:divide-accent px-4 py-4 text-foreground font-arame overflow-x-hidden'>
+        <Navbar pageTitle='Blog'/>
         <ListLayout
             posts={posts}
             initialDisplayPosts={initialDisplayPosts}
             pagination={pagination}
             title="All Posts"
         />
+        <Footer />
+    </div>
     )
 }

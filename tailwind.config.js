@@ -70,7 +70,7 @@ module.exports = {
                     foreground: 'var(--muted-foreground)',
                 },
                 accent: {
-                    DEFAULT: 'var(--accent)',
+                    DEFAULT: '#E9EAE2',
                     foreground: 'var(--accent-foreground)',
                 },
                 popover: {

@@ -77,10 +77,10 @@ export default function ListLayoutWithTags({
 
   return (
     <>
-      <div className='w-[calc(100vw-120px)] ml-[calc(-50vw+50%+60px)] mt-[calc(-100px)] font-arame'>
+      <div className='w-[calc(100vw-20px)]  font-arame'>
         <div className="pb-6 pt-6">
         </div>
-        <h1 className='font-kleemax text-[#98C0B5] text-2xl'>All Posts</h1>
+        <h1 className='text-foreground text-[16px]'>{`(All Posts)`}</h1>
         <div className="flex sm:space-x-24">
           <div>
             <ul>
@@ -88,7 +88,7 @@ export default function ListLayoutWithTags({
                 const { path, date, title, summary, tags } = post
                 return (
                   <li key={path} className="py-5">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
+                    <article className="flex flex-col space-y-2 xl:space-y-0 border-t border-foreground py-4">
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -98,11 +98,11 @@ export default function ListLayoutWithTags({
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-[#98C0B5]/100 uppercase">
+                            <Link href={`/${path}`} className="text-gray-900 dark:text-foreground uppercase">
                               {title}
                             </Link>
                           </h2>
-                          <div className="flex flex-wrap gap-4 text-[#916DCF]/100">
+                          <div className="flex flex-wrap gap-4 text-accent/100">
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
                         </div>

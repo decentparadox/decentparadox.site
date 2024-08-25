@@ -13,11 +13,6 @@ const Footer = () => {
         <div className="slide-name">
           <p>Sasank Reddy</p>
         </div>
-        <button className="githubbtn">
-          <Link href="https://github.com/decentparadox/Portfolio">
-            <p>Github</p>
-          </Link>
-        </button>
       </div>
       <div className="slide-info py-4 md:py-0">
         <div className="year">
@@ -44,20 +39,18 @@ const Home = () => {
     <section className="p-4 w-[calc(100vw-20px)] ml-[calc(-50vw+50%+10px)]">
       <Footer />
       <div className="w-full py-[60px] ">
-        {/* <div className="bordered"> */}
         <Bordered >
         <div className="h-[300px]">
             <div className="w-full h-full flex justify-center items-center">
-              <h1 className="absolute font-vaxen xl:text-[240px] 2xl:text-[300px] md:text-[150px] sm:text-[124px] text-[82px]  text-[#916DCF]">
+              <h1 className="absolute font-vaxen xl:text-[240px] 2xl:text-[300px] md:text-[150px] sm:text-[124px] text-[82px]  ">
                 DDOX
               </h1>
-              <p className="z-[2] font-kleemax xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
+              <p className="z-[2] font-kleemax text-accent xl:text-[64px] 2xl:text-[76px] md:text-[40px] sm:text-[32px] text-[20px] fg-accent">
                 SASANK REDDY
               </p>
             </div>
           </div>
         </Bordered >
-        {/* </div> kk */}
       </div>
 
     </section>

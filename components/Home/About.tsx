@@ -43,7 +43,7 @@ gsap
     split.chars,
     {
       duration: 0.3,
-      color: "#98C0B5",
+      color: "var('--foreground')",
       stagger: 0.1,
     },
     0.1
@@ -75,7 +75,7 @@ gsap
         <FitWrap>CONSTANTLY EVOLVING ✺ AND PUSHING THE BOUNDARIES✦</FitWrap>
         <FitWrap>COMBINING ↠ CREATIVITY AND TECHNOLOGY ↞ SEAMLESSLY</FitWrap>
       </section> */}
-      <section className="w-full mt-[96px] uppercase text-[#98C0B5]/40" >
+      {/* <section className="w-full mt-[96px] uppercase text-foreground/40" >
       <div className=" container w-full flex flex-col md:w-[70%] md:flex-row gap-16 mb-16">
         <div className="flex-[2]">
           <p>
@@ -100,7 +100,7 @@ gsap
           </p>
         </div>
       </div>
-    </section>
+    </section> */}
     </main>
 
   );

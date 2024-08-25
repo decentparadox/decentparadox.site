@@ -43,7 +43,7 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className="marquee text-center text-[10px] lg:text-[14px] xl:text-[16px]" style={{ color: '#916DCF' }}>
+    <div className="marquee text-center text-[10px] lg:text-[14px] xl:text-[16px]" style={{ color: '#E9EAE2' }}>
       <div className="marquee__inner">
         {Array.from({ length: 8 }).map((_, index) => (
           <div key={index} className="marquee__part">
