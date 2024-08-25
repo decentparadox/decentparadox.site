@@ -34,7 +34,7 @@ export default function Hero() {
     }, [])
 
     return (
-        <main className="ml-[calc(-50vw+50%+10px)] mt-[calc(-100px)] flex min-h-screen w-[calc(100vw-20px)] flex-col items-center justify-between p-4">
+        <main className="ml-[calc(-50vw+50%+10px)]  flex min-h-screen w-[calc(100vw-20px)] flex-col items-center justify-between p-4">
             <Navbar pageTitle={'Folio'} />
             <div className="h-auto w-full overflow-hidden">
                 <Bordered>
