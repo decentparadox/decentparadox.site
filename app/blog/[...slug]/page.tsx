@@ -12,7 +12,8 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { allCoreContent, coreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 import { ReportView } from './view'
-
+import Navbar from '@/components/Home/Navbar/Navbar'
+import Footer from "@/components/Home/Footer"
 const defaultLayout = 'PostLayout'
 const layouts = {
     PostLayout,
@@ -107,14 +108,15 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     const Layout = layouts[post.layout || defaultLayout]
 
     return (
-        <>
+        <div className='w-[calc(100%-64px)] m-auto text-foreground font-krypton'>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            <Navbar pageTitle='Blog'/>
             <ReportView slug={slug} />
             <Layout
-                className="font-mission"
+                className="font-krypton"
                 content={mainContent}
                 authorDetails={authorDetails}
                 toc={post.toc}
@@ -123,6 +125,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
             >
                 <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
             </Layout>
-        </>
+            <Footer />
+        </div>
     )
 }
