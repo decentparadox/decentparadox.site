@@ -21,7 +21,7 @@ export default function BlogPage() {
     }
 
     return (
-        <div className='w-full divide-accent-foreground dark:divide-accent px-4 py-4 text-foreground font-arame overflow-x-hidden'>
+        <div className='w-full divide-accent-foreground dark:divide-accent px-4 py-4 text-foreground font-mission '>
         <Navbar pageTitle='Blog'/>
         <ListLayout
             posts={posts}

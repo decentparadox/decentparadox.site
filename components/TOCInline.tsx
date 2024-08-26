@@ -135,7 +135,7 @@ const TOCInline = ({
 
     return (
         <>
-        <div className='font-arame'>
+        <div className='font-mission'>
             {!asDisclosure && (
                 <div
                     className={`pb-2 pt-2 text-base font-bold text-accent ${

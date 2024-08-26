@@ -77,7 +77,7 @@ export default function ListLayoutWithTags({
 
   return (
     <>
-      <div className='w-[calc(100vw-20px)]  font-arame'>
+      <div className='w-[calc(100vw-20px)]  font-mission'>
         <div className="pb-6 pt-6">
         </div>
         <h1 className='text-foreground text-[16px]'>{`(All Posts)`}</h1>
@@ -89,25 +89,25 @@ export default function ListLayoutWithTags({
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0 border-t border-foreground py-4">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-3">
-                        <div>
+                      <div className="flex flex-col md:flex-row space-y-3">
+                        <div className='flex flex-1 flex-col'>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link href={`/${path}`} className="text-gray-900 dark:text-foreground uppercase">
                               {title}
                             </Link>
                           </h2>
-                          <div className="flex flex-wrap gap-4 text-accent/100">
+                          <dl>
+                        <dt className="sr-only">Published on</dt>
+                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-foreground opacity-65">
+                          <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        </dd>
+                      </dl>
+                        </div>
+                        <div className="flex-1 text-ellipsis prose max-w-none text-foreground uppercase">
+                          <p>{summary}</p>
+                          <div className="flex flex-wrap gap-4 text-foreground opacity-65">
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
                         </div>
                       </div>
                     </article>

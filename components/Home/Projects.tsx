@@ -15,23 +15,21 @@ const Home = () => {
                     <div className="about-col flex flex-col gap-4 text-justify">
                         <p>(about me)</p>
                         <p>
-                            Hey, I'm Sasank Reddy, also known as "decentparadox." I'm currently a
-                            student pursuing a degree in Computer Science with a focus on Artificial
-                            Intelligence at Amrita School of Engineering, Bangalore. During the day,
-                            I work as a graphic and UI/UX designer, and I've got two years of
-                            experience under my belt. I'm also into tech stuff like reverse
-                            engineering, game hacking, and web development. On weekends, you'll find
-                            me diving into Capture The Flag (CTF) challenges.
+                            Hey, I'm Sasank Reddy, also known as "DecentParadox." I'm currently
+                            pursuing a degree in Computer Science at Amrita School of Engineering.
+                            I'm a creative designer and developer, and I occasionally participate in
+                            CTFs. I also enjoy creating challenges for CTFs.
                         </p>
                         <p>
-                            I'm all about learning and growth. My goal is to become a versatile
-                            problem solver, so I'm constantly improving my skills in areas like
-                            blockchain, app development, machine learning, and networking. I believe
-                            in being well-prepared before taking on any projects. When I'm not busy
-                            with tech, I love reading books and manga. It's my way of staying
-                            creative and inspired. I don't limit myself to one industry; I'm ready
-                            to adapt and take on new challenges. While I don't have a fancy mission
-                            statement, my passion for learning and mastering new skills drive
+                            I am a student and as such, education and the process of acquiring
+                            knowledge is something I am very much interested in. My objective is to
+                            be a generalist. thinker, thus I am developing my problem-solving
+                            abilities on a daily basis in such fields as blockchain, application
+                            development, artificial intelligence and networking. I don&apos;t stick to a particular
+                            field; I am prepared in order to change and accept new tasks. Thus, as
+                            much as I do not have a sophisticated mission statement, that, the
+                            desire to acquire knowledge and be proficient in the acquired knowledge
+                            motivates me
                         </p>
                     </div>
                 </div>

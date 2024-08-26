@@ -350,9 +350,14 @@
     src: url("../public/static/fonts/mission-control.otf") format("opentype");
   }
 
+  @font-face {
+    font-family: "Krypton";
+    src: url("../public/static/fonts/MonaspaceKrypton-Regular.otf");
+  }
+
 body {
   /* color: #98C0B5; */
-  font-family: "Arame";
+  font-family: "Krypton";
   /* background: #1f2021; */
 }
 .font-kleemax{
@@ -362,11 +367,11 @@ body {
 .font-vaxen {
   font-family: "Vaxen";
 }
-/* .font-arame {
+/* .font-mission {
     font-family: 'Arame';
 } */
-.font-arame {
-    font-family: "Mission";
+.font-mission {
+    font-family: "Krypton";
 }
 .noise::before {
     position: fixed;

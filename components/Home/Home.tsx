@@ -18,7 +18,7 @@ export default function Home () {
       return <LoadingScreen />;
     }
     return (
-        <div className="divide-accent-foreground dark:divide-accent text-foreground font-arame uppercase">
+        <div className="divide-accent-foreground dark:divide-accent text-foreground font-mission uppercase">
             <Hero />
             {/* <About /> */}
             <Projects />

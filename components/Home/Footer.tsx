@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import Bordered from "@/layouts/Bordered"
-import "./Footer.css"
 const Footer = () => {
   return (
     <footer className="w-[calc(100vw-20px)] ml-[calc(-50vw+50%+10px)] p-4 justify-between flex flex-col md:flex-row">
@@ -37,7 +36,7 @@ const Footer = () => {
 const Home = () => {
   return (
     <section className="p-4 w-[calc(100vw-20px)] ml-[calc(-50vw+50%+10px)]">
-      <Footer />
+      {/* <Footer /> */}
       <div className="w-full py-[60px] ">
         <Bordered >
         <div className="h-[300px]">
