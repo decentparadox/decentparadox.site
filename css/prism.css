@@ -1,150 +1,165 @@
-/**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
- */
 
-/* Code title styles */
-.remark-code-title {
-    @apply mt-6 rounded-t bg-tertiary px-5 py-3 font-mono text-sm font-bold text-tertiary-foreground;
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	background: #1d262f;
+	color: #57718e;
 }
 
-.remark-code-title + div > pre {
-    @apply mt-0 rounded-t-none;
+pre > code[class*="language-"] {
+	font-size: 1em;
 }
 
-/* Code block styles */
-.code-highlight {
-    @apply float-left min-w-full;
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #004a9e;
 }
 
-.code-line {
-    @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #004a9e;
 }
 
-.code-line.inserted {
-    @apply bg-green-500 bg-opacity-20;
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
 }
 
-.code-line.deleted {
-    @apply bg-red-500 bg-opacity-20;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
 }
-
-.highlight-line {
-    @apply -mx-4 border-l-4 border-primary bg-primary bg-opacity-50;
-}
-
-.line-number::before {
-    @apply -ml-2 mr-4 inline-block w-4 text-right text-muted-foreground;
-    content: attr(line);
-}
-
-/**
- * Darcula theme
- *
- * Adapted from a theme based on:
- * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
- *
- * @author Alexandre Paradis <service.paradis@gmail.com>
- * @version 1.0
- */
 
 .token.comment,
 .token.prolog,
+.token.doctype,
 .token.cdata {
-    color: #808080;
+	color: #4a5f78;
 }
 
-.token.delimiter,
-.token.boolean,
-.token.keyword,
-.token.selector,
-.token.important,
-.token.atrule {
-    color: #cc7832;
+.token.punctuation {
+	color: #4a5f78;
 }
 
-.token.operator,
-.token.punctuation,
-.token.attr-name {
-    color: #a9b7c6;
+.token.namespace {
+	opacity: .7;
 }
 
 .token.tag,
-.token.tag .punctuation,
-.token.doctype,
-.token.builtin {
-    color: #e8bf6a;
-}
-
-.token.entity,
-.token.number,
-.token.symbol {
-    color: #6897bb;
+.token.operator,
+.token.number {
+	color: #0aa370;
 }
 
 .token.property,
-.token.constant,
-.token.variable {
-    color: #9876aa;
-}
-
-.token.string,
-.token.char {
-    color: #6a8759;
-}
-
-.token.attr-value,
-.token.attr-value .punctuation {
-    color: #a5c261;
-}
-
-.token.attr-value .punctuation:first-child {
-    color: #a9b7c6;
-}
-
-.token.url {
-    color: #287bde;
-    text-decoration: underline;
-}
-
 .token.function {
-    color: #ffc66d;
+	color: #57718e;
 }
 
-.token.regex {
-    background: #364135;
+.token.tag-id,
+.token.selector,
+.token.atrule-id {
+	color: #ebf4ff;
 }
 
-.token.bold {
-    font-weight: bold;
+code.language-javascript,
+.token.attr-name {
+	color: #7eb6f6;
 }
 
-.token.italic {
-    font-style: italic;
+code.language-css,
+code.language-scss,
+.token.boolean,
+.token.string,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.language-scss .token.string,
+.style .token.string,
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit,
+.token.statement,
+.token.regex,
+.token.atrule {
+	color: #9CADA6;
 }
 
-.token.inserted {
-    background: #294436;
+.token.placeholder,
+.token.variable {
+	color: #9CADA6;
 }
 
 .token.deleted {
-    background: #484a4a;
+	text-decoration: line-through;
 }
 
-code.language-css .token.property,
-code.language-css .token.property + .token.punctuation {
-    color: #a9b7c6;
+.token.inserted {
+	border-bottom: 1px dotted #ebf4ff;
+	text-decoration: none;
 }
 
-code.language-css .token.id {
-    color: #ffc66d;
+.token.italic {
+	font-style: italic;
 }
 
-code.language-css .token.selector > .token.class,
-code.language-css .token.selector > .token.attribute,
-code.language-css .token.selector > .token.pseudo-class,
-code.language-css .token.selector > .token.pseudo-element {
-    color: #ffc66d;
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.important {
+	color: #7eb6f6;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre > code.highlight {
+	outline: .4em solid #34659d;
+	outline-offset: .4em;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers.line-numbers .line-numbers-rows {
+	border-right-color: #1f2932;
+}
+
+.line-numbers .line-numbers-rows > span:before {
+	color: #2c3847;
+}
+
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight.line-highlight {
+	background: rgba(10, 163, 112, 0.2);
+	background: -webkit-linear-gradient(left, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0));
+	background: linear-gradient(to right, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0));
 }

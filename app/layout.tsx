@@ -10,6 +10,7 @@ import { SearchConfig, SearchProvider } from 'pliny/search'
 import 'pliny/search/algolia.css'
 import 'react-grid-layout/css/styles.css'
 import 'react-resizable/css/styles.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { ThemeProviders } from './theme-providers'
 
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         </div>
                     </SectionContainer>
                 </ThemeProviders>
+                <GoogleAnalytics gaId="GTM-PXJS8VXB" />
             </body>
         </html>
     )

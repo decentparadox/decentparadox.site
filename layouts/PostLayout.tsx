@@ -129,7 +129,7 @@ export default function PostLayout({
                                 {/* <div className=" flex-1 toc not-prose">
                                     <TOCInline toc={toc} />
                                 </div> */}
-                                <div className=' font-krypton w-full text-foreground'>{children}</div>
+                                <div className=' font-krypton text-justify w-full text-foreground'>{children}</div>
                             </div>
                         </div>
                         <footer>

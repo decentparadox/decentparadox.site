@@ -1,13 +1,25 @@
 import React from 'react'
 import './Project.css'
-
 import Project1Img from 'public/about/img1.jpeg'
 import Project2Img from 'public/about/img2.jpeg'
 import Project3Img from 'public/about/img3.jpeg'
 import Project4Img from 'public/about/img4.jpeg'
 import Project5Img from 'public/about/img5.jpeg'
-
+import { Skeleton } from '../shadcn/skeleton'
+import { useLanyard } from 'react-use-lanyard'
+/**
+ * Home
+ *
+ * This component renders the home page of the website.
+ *
+ * It contains a short about section, a list of projects, and a divider.
+ *
+ * @returns {JSX.Element} The home page component.
+ */
 const Home = () => {
+    const lanyard = useLanyard({
+        userId: '853076396191907841',
+    })
     return (
         <div className="w-100 relative ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] overflow-x-hidden px-[16px] pt-[2em]">
             <section className="w-100 my-0 mt-16">
@@ -25,15 +37,32 @@ const Home = () => {
                             knowledge is something I am very much interested in. My objective is to
                             be a generalist. thinker, thus I am developing my problem-solving
                             abilities on a daily basis in such fields as blockchain, application
-                            development, artificial intelligence and networking. I don&apos;t stick to a particular
-                            field; I am prepared in order to change and accept new tasks. Thus, as
-                            much as I do not have a sophisticated mission statement, that, the
-                            desire to acquire knowledge and be proficient in the acquired knowledge
-                            motivates me
+                            development, artificial intelligence and networking. I don&apos;t stick
+                            to a particular field; I am prepared in order to change and accept new
+                            tasks. Thus, as much as I do not have a sophisticated mission statement,
+                            that, the desire to acquire knowledge and be proficient in the acquired
+                            knowledge motivates me
                         </p>
                     </div>
                 </div>
             </section>
+            {/* <div className="flex flex-col gap-4 md:flex-row">
+                <div className="w-full md:w-1/2">
+                    {lanyard.data && !lanyard.isValidating ? (
+                        <DiscordPresence lanyard={lanyard.data} />
+                    ) : (
+                        <Skeleton className="h-full w-full rounded-3xl" />
+                    )}
+                </div>
+                <div className="w-full md:w-1/2">
+                    <GithubCalendar
+                        username="decentparadox"
+                        hideColorLegend
+                        hideMonthLabels
+                        hideTotalCount
+                    />
+                </div>
+            </div> */}
 
             <div className="projects-nav">
                 <div className="projects-nav-container">
