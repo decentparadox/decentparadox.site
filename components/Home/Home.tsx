@@ -4,7 +4,6 @@ import About from "./About";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import LoadingScreen from "../LoadingScreen";
-import GithubCalendar from "./GithubCalendar";
 import { useState, useEffect } from 'react';
 export default function Home () {
     const [isLoading, setIsLoading] = useState(true);
