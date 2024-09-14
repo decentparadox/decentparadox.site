@@ -386,3 +386,24 @@ body {
     pointer-events: none;
     background: url("/static/images/noise.gif");
   }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--foreground) #1f2021;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--foreground);
+    border-radius: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #1f2021;
+    border-radius: 14px;
+    border: 3px solid var(--foreground);
+  }
+  

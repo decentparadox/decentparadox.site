@@ -1,10 +1,194 @@
 "use client";
-import meetups from "@/data/meetups.json";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import React, { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import useLocalStorageState from "use-local-storage-state";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import addEntry from "@/lib/addEntry";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+const FormSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  company: z.string().min(2),
+  email: z.string().min(2),
+  phone: z.string().min(2),
+  linkedin: z.string().min(2),
+});
+
+type Meetup = {
+  title: string;
+  description: string;
+  date: string;
+  accentColor: string;
+  fontPrimary: string;
+  fontSecondary: string;
+  thumbnail: string;
+  isRegistrationAvailable: boolean;
+  address: string;
+  brochure: string;
+  aboutEvent: string;
+  postEvent: string;
+};
+
+type Meetups = {
+  [key: string]: Meetup;
+};
+
 export default function Page({ params }: { params: { slug: string } }) {
   const slug = params.slug;
   const currentMeetup = (meetups.meetups as Meetups)[slug];
+  if (!currentMeetup) {
+    return <h1 className="text-red-500">Meetup not found</h1>;
+  }
+  let localGetRegister;
+  if (typeof window !== "undefined") {
+    localGetRegister = localStorage.getItem("isRegistered");
+  }
+  const [open, setOpen] = useState(false);
+  const [register, setRegister] = useLocalStorageState("isRegistered", {
+    defaultValue: false,
+  });
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+    },
+  });
+
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    try {
+      const res = await addEntry(data);
+      if (res) {
+        console.log(res);
+        setOpen(false);
+        setRegister(true);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
-    <>
-    </>
-    )
+    <div
+      style={
+        {
+          color: currentMeetup.accentColor,
+          fill: currentMeetup.accentColor,
+          fontFamily: currentMeetup.fontSecondary,
+          "--accent": currentMeetup.accentColor,
+          "--accentFont": currentMeetup.fontPrimary
+        } as React.CSSProperties
+      }
+    >
+      
+      <div style={{ fontFamily: currentMeetup.fontSecondary }}>
+        <div >
+          {!register && currentMeetup.isRegistrationAvailable && (
+                          <Dialog open={open} onOpenChange={setOpen}>
+                            <DialogTrigger asChild>
+                              <Button>
+                                Register
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent>
+                              <DialogHeader>
+                                <DialogTitle>
+                                  Register for the meetup
+                                </DialogTitle>
+                                <DialogDescription>
+                                  Please fill the blanks to register
+                                </DialogDescription>
+                              </DialogHeader>
+                              <div>
+                                <Form {...form}>
+                                  <form
+                                    onSubmit={form.handleSubmit(onSubmit)}
+                                    className="w-full"
+                                  >
+                                    <FormField
+                                      control={form.control}
+                                      name="name"
+                                      render={({ field }) => (
+                                        <FormItem className="py-2">
+                                          <FormLabel>Name *</FormLabel>
+                                          <FormControl>
+                                            <Input
+                                              placeholder="john doe"
+                                              {...field}
+                                            />
+                                          </FormControl>
+                                          <FormMessage />
+                                        </FormItem>
+                                      )}
+                                    />
+                                    // all other form feilds are remove for brevity
+
+                                    <Button
+                                      type="submit"
+                                      className="w-[380px] mt-3"
+                                    >
+                                      Register
+                                    </Button>
+                                  </form>
+                                </Form>
+                              </div>
+                              <DialogFooter className="mx-auto"></DialogFooter>
+                            </DialogContent>
+                          </Dialog>
+          )}
+          {register && currentMeetup.isRegistrationAvailable && (
+            <div>
+              <div>
+                <p>
+                  Registration Done
+                </p>
+              </div>
+              <div>
+                Thank you for registering!, Please join in the group for further
+                updates
+              </div>
+            </div>
+          )}
+          {!currentMeetup.isRegistrationAvailable && (
+            <div>
+              <div>
+                <p>
+                  Registration Closed
+                </p>
+              </div>
+              <div>
+                This event is not currently taking registrations. You may
+                contact the host or subscribe to receive updates.
+              </div>
+            </div>
+          )}
+      </div>
+    </div>
+  );
 }
