@@ -1,5 +1,4 @@
 import React from 'react'
-import './Project.css'
 import Project1Img from 'public/about/img1.jpeg'
 import Project2Img from 'public/about/img2.jpeg'
 import Project3Img from 'public/about/img3.jpeg'
@@ -7,6 +6,9 @@ import Project4Img from 'public/about/img4.jpeg'
 import Project5Img from 'public/about/img5.jpeg'
 import { Skeleton } from '../shadcn/skeleton'
 import { useLanyard } from 'react-use-lanyard'
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 /**
  * Home
  *
@@ -16,6 +18,58 @@ import { useLanyard } from 'react-use-lanyard'
  *
  * @returns {JSX.Element} The home page component.
  */
+type ProjectProp = {
+    name : String,
+    imageSrc : String,
+    link : String,
+    desc : String,
+    year : String
+}
+function ProjectItem({ name, imageSrc, link, desc, year }: ProjectProp) {
+    const [isHovered, setIsHovered] = useState(false)
+  
+    return (
+      <div
+        className="group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <Link href={`/projects/${link}`}>
+          <div className="w-full flex justify-between h-28 pt-6 border-t-2 border-primary">
+            <div className="flex flex-[4] md:w-[300px] relative overflow-hidden">
+              <div
+                className={`absolute left-0 top-0 w-32 h-full mr-4 overflow-hidden transition-all duration-300 ease-in-out ${
+                  isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                }`}
+              >
+                <img
+                  src={`/static/images/${imageSrc}`}
+                  alt = {`${name}`}
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className={` transition-all duration-300 ease-in-out
+                ${ 
+                    isHovered ? 'ml-32' : 'ml-0'
+                  }`
+              }>
+                <h2 className="text-lg font-semibold">{name}</h2>
+              </div>
+            </div>
+            <div className="flex-[2] hidden md:block">
+              <p className="text-sm text-muted-foreground">{desc}</p>
+              <p className="text-sm text-muted-foreground">/{year}</p>
+            </div>
+            <div className="flex-[0.5] text-right">
+              <p className="text-xl">&#8599;</p>
+            </div>
+          </div>
+        </Link>
+      </div>
+    )
+  }
 const Home = () => {
     const lanyard = useLanyard({
         userId: '853076396191907841',
@@ -25,7 +79,7 @@ const Home = () => {
             <section className="w-100 my-0 mt-16">
                 <div className="ml-auto flex w-full gap-[10rem]">
                     <div className="about-col flex flex-col gap-4 text-justify">
-                        <p>(about me)</p>
+                        <p className='opacity-75'>(about me)</p>
                         <p>
                             Hey, I'm Sasank Reddy, also known as "DecentParadox." I'm currently
                             pursuing a degree in Computer Science at Amrita School of Engineering.
@@ -46,118 +100,18 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* <div className="flex flex-col gap-4 md:flex-row">
-                <div className="w-full md:w-1/2">
-                    {lanyard.data && !lanyard.isValidating ? (
-                        <DiscordPresence lanyard={lanyard.data} />
-                    ) : (
-                        <Skeleton className="h-full w-full rounded-3xl" />
-                    )}
-                </div>
-                <div className="w-full md:w-1/2">
-                    <GithubCalendar
-                        username="decentparadox"
-                        hideColorLegend
-                        hideMonthLabels
-                        hideTotalCount
-                    />
-                </div>
-            </div> */}
 
-            <div className="projects-nav">
-                <div className="projects-nav-container">
-                    <div className="project-item">
-                        <a href="/Projects/Kalser">
-                            <div className="project-link">
-                                <div className="project-l">
-                                    <div className="project-link-img">
-                                        <img src="static/images/kalser.png" alt="" />
-                                    </div>
-                                    <div className="project-name">
-                                        <h2>Kalser</h2>
-                                    </div>
-                                </div>
-                                <div className="project-date">
-                                    <p>TUI tool to rice your linux</p>
-                                    <p>/2023</p>
-                                </div>
-                                <div className="project-dir">
-                                    <p>&#8599;</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div className="project-item">
-                        <a href="/Projects/evanix">
-                            <div className="project-link">
-                                <div className="project-l">
-                                    <div className="project-link-img">
-                                        <img src="static/images/evanix.png" alt="" />
-                                    </div>
-                                    <div className="project-name">
-                                        <h2>Eva 01 nix</h2>
-                                    </div>
-                                </div>
-                                <div className="project-date">
-                                    <p>Nix os Flakes dotfiles</p>
-                                    <p>/2024</p>
-                                </div>
-                                <div className="project-dir">
-                                    <p>&#8599;</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div className="project-item">
-                        <a href="/Projects/Orca">
-                            <div className="project-link">
-                                <div className="project-l">
-                                    <div className="project-link-img">
-                                        <img src="static/images/orca.png" alt="" />
-                                    </div>
-                                    <div className="project-name">
-                                        <h2>Orca</h2>
-                                    </div>
-                                </div>
-                                <div className="project-date">
-                                    <p>Astro integration for Graphic Designers</p>
-                                    <p>/2024</p>
-                                </div>
-                                <div className="project-dir">
-                                    <p>&#8599;</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div className="project-item">
-                        <a href="/Projects/bi0smeetups">
-                            <div className="project-link">
-                                <div className="project-l">
-                                    <div className="project-link-img">
-                                        <img src="static/images/bi0s.png" alt="" />
-                                    </div>
-                                    <div className="project-name">
-                                        <h2>bi0s Meetups</h2>
-                                    </div>
-                                </div>
-                                <div className="project-date">
-                                    <p>bi0s meetups website</p>
-                                    <p>/2024</p>
-                                </div>
-                                <div className="project-dir">
-                                    <p>&#8599;</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            <div className="my-16 w-100">
+                <div className="w-100 ml-auto">
+                    <p className='opacity-75 pb-4'>(Projects)</p>
+                    <ProjectItem name="Kalser" imageSrc="kalser.png" link="Kalser" desc="TUI tool to rice your Linux" year="2023" />
+                    <ProjectItem name="PiratedPixels" imageSrc="piratedPixels.png" link="piratedpixels" desc="CTF platform on TUI" year="2024" />
+                    <ProjectItem name="Orca" imageSrc="orca.png" link="orca" desc="Astro integration for Graphic Designers" year="2024" />
+                    <ProjectItem name="bi0sMeetups" imageSrc="bi0s.png" link="bi0smeetups" desc="Meetups website for India's #1 CTF" year="2024" />
                 </div>
             </div>
 
-            <div className="w-100 opacity-50">
-                <div className="w-100 mx-0 my-[0.75em] h-[0.65px] bg-foreground"></div>
-            </div>
+
         </div>
     )
 }

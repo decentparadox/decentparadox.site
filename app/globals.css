@@ -199,9 +199,7 @@
     }
 
     /* Grid Items */
-    .grid-item-a {
-        background-image: url('/static/images/bento/about-square.webp');
-    }
+
 
     .grid-item-b-overlay {
         background-image: url('/static/images/bento/details.webp');
@@ -254,38 +252,7 @@
         }
     }
 
-    @media (min-width: 1280px) {
-        .bento:hover > *:not(.first):hover .overlay {
-            opacity: 1;
-        }
-        .grid-item-a-silhouette {
-            background-image: url('/static/images/bento/about-silhouette.webp');
-        }
 
-        .grid-item-b {
-            background-image: url('/static/images/bento/details-silhouette.webp');
-        }
-
-        .grid-item-e {
-            background-image: url('/static/images/bento/blog-silhouette.webp');
-        }
-
-        .grid-item-f {
-            background-image: url('/static/images/bento/contributions-silhouette.webp');
-        }
-
-        .grid-item-g {
-            background-image: url('/static/images/bento/spotify-silhouette.webp');
-        }
-
-        .grid-item-i {
-            background-image: url('/static/images/bento/github-silhouette.webp');
-        }
-
-        .grid-item-k {
-            background-image: url('/static/images/bento/twitter-silhouette.webp');
-        }
-    }
 }
 
 @layer utilities {
