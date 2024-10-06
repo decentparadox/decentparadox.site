@@ -19,11 +19,11 @@ import Link from 'next/link'
  * @returns {JSX.Element} The home page component.
  */
 type ProjectProp = {
-    name : String,
-    imageSrc : String,
-    link : String,
-    desc : String,
-    year : String
+    name : string,
+    imageSrc : string,
+    link : string,
+    desc : string,
+    year : string
 }
 function ProjectItem({ name, imageSrc, link, desc, year }: ProjectProp) {
     const [isHovered, setIsHovered] = useState(false)

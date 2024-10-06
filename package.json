@@ -1,7 +1,9 @@
 {
-    "name": "tailwind-nextjs-starter-blog",
+    "name": "decentparadox",
     "version": "2.0.1",
     "private": true,
+    "license": "MIT",
+    "author": "DecentParadox",
     "scripts": {
         "start": "next dev",
         "dev": "cross-env INIT_CWD=$PWD next dev",
