@@ -13,7 +13,7 @@ import { allCoreContent, coreContent, sortPosts } from 'pliny/utils/contentlayer
 
 import { ReportView } from './view'
 import Navbar from '@/components/Home/Navbar/Navbar'
-import Footer from "@/components/Home/Footer"
+import Footer from '@/components/Home/Footer'
 const defaultLayout = 'PostLayout'
 const layouts = {
     PostLayout,
@@ -108,12 +108,12 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     const Layout = layouts[post.layout || defaultLayout]
 
     return (
-        <div className='w-[calc(100%-64px)] m-auto text-foreground font-krypton'>
+        <div className="font-krypton m-auto w-[calc(100%-64px)] text-foreground">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <Navbar pageTitle='Blog'/>
+            <Navbar pageTitle="Blog" />
             <ReportView slug={slug} />
             <Layout
                 className="font-krypton"

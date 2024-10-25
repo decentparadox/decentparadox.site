@@ -34,14 +34,13 @@ export default function PostLayout({
     const { path, slug, tags, date, title, thumbnail } = content
     const displayThumbnail = thumbnail || '/static/images/twitter-card.png'
 
-
     return (
         <>
             <ScrollTopAndComment />
             <article>
                 <div>
                     <header>
-                        <div className="font-krypton text-foreground space-y-1 border-b border-muted-foreground pb-10 text-center dark:border-muted">
+                        <div className="font-krypton space-y-1 border-b border-muted-foreground pb-10 text-center text-foreground dark:border-muted">
                             {/* <div className="w-full">
                                 <div className="relative -mx-6 mt-6 md:-mx-8">
                                     <div className="relative aspect-[1.91/1] w-full rounded-md">
@@ -125,15 +124,17 @@ export default function PostLayout({
                     </header>
                     <div className="divide-y divide-muted-foreground pb-8 dark:divide-muted xl:divide-y-0">
                         <div className="divide-y divide-accent-foreground dark:divide-accent xl:col-span-3 xl:row-span-2 xl:pb-0">
-                            <div className=" flex prose prose-sm max-w-none pb-8 pt-10 dark:prose-invert">
+                            <div className="prose prose-sm flex max-w-none pb-8 pt-10 dark:prose-invert">
                                 {/* <div className=" flex-1 toc not-prose">
                                     <TOCInline toc={toc} />
                                 </div> */}
-                                <div className=' font-krypton text-justify w-full text-foreground'>{children}</div>
+                                <div className="font-krypton w-full text-justify text-foreground">
+                                    {children}
+                                </div>
                             </div>
                         </div>
                         <footer>
-                            <div className="flex flex-col font-krypton text-accent opacity-75 text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
+                            <div className="font-krypton flex flex-col text-sm font-medium text-accent opacity-75 sm:flex-row sm:justify-between sm:text-base">
                                 {prev && prev.path && (
                                     <div className="pt-4 xl:pt-8">
                                         <Link

@@ -34,7 +34,7 @@ export default function Hero() {
     }, [])
 
     return (
-        <main className="ml-[calc(-50vw+50%+10px)]  flex min-h-screen w-[calc(100vw-20px)] flex-col items-center justify-between p-4">
+        <main className="ml-[calc(-50vw+50%+10px)] flex min-h-screen w-[calc(100vw-20px)] flex-col items-center justify-between p-4">
             <Navbar pageTitle={'Folio'} />
             <div className="h-auto w-full overflow-hidden">
                 <Bordered>
@@ -43,7 +43,7 @@ export default function Hero() {
                             <h1 className="font-vaxen absolute text-[64px] text-foreground sm:text-[124px] md:text-[150px] xl:text-[240px] 2xl:text-[300px]">
                                 2024
                             </h1>
-                            <p className="font-kleemax text-accent z-[2] text-[16px] sm:text-[32px] md:text-[40px] xl:text-[64px] 2xl:text-[76px]">
+                            <p className="font-kleemax z-[2] text-[16px] text-accent sm:text-[32px] md:text-[40px] xl:text-[64px] 2xl:text-[76px]">
                                 DECENTPARADOX
                             </p>
                         </div>
@@ -51,13 +51,19 @@ export default function Hero() {
                 </Bordered>
                 <div className="flex w-full items-center justify-between py-3">
                     <div className="flex w-[35%] justify-start hover:underline">
-                      <p>  <Link href="/blog">BLOG </Link>↗</p>
+                        <p>
+                            {' '}
+                            <Link href="/blog">BLOG </Link>↗
+                        </p>
                     </div>
                     <div className="flex w-[30%] justify-center text-center">
                         {titles[titleIndex]}
                     </div>
                     <div className="flex w-[35%] justify-end hover:underline">
-                       <p> ↖ <Link href="/projects"> PROJECTS</Link></p>
+                        <p>
+                            {' '}
+                            ↖ <Link href="/projects"> PROJECTS</Link>
+                        </p>
                     </div>
                 </div>
             </div>

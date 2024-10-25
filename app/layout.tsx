@@ -1,4 +1,3 @@
-
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import { Analytics } from '@vercel/analytics/react'
@@ -96,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <SectionContainer>
                         <div className="noise box-border flex h-full flex-col font-sans">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                                    {children}
+                                {children}
                             </SearchProvider>
                         </div>
                     </SectionContainer>

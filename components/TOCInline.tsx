@@ -135,30 +135,32 @@ const TOCInline = ({
 
     return (
         <>
-        <div className='font-krypton'>
-            {!asDisclosure && (
-                <div
-                    className={`pb-2 pt-2 text-base font-bold text-accent ${
-                        rightAlign ? 'mr-6 text-right' : 'ml-6'
-                    }`}
-                >
-                    {title}
-                </div>
-            )}
-            {asDisclosure ? (
-                <details open={!collapse}>
-                    <summary
-                        className={`pb-2 pt-2 text-xl font-bold ${
+            <div className="font-krypton">
+                {!asDisclosure && (
+                    <div
+                        className={`pb-2 pt-2 text-base font-bold text-accent ${
                             rightAlign ? 'mr-6 text-right' : 'ml-6'
                         }`}
                     >
-                        Table of Contents
-                    </summary>
-                    <div className={`text-foreground/100 ${rightAlign ? 'mr-6' : 'ml-6'}`}>{createList(nestedList)}</div>
-                </details>
-            ) : (
-                createList(nestedList)
-            )}
+                        {title}
+                    </div>
+                )}
+                {asDisclosure ? (
+                    <details open={!collapse}>
+                        <summary
+                            className={`pb-2 pt-2 text-xl font-bold ${
+                                rightAlign ? 'mr-6 text-right' : 'ml-6'
+                            }`}
+                        >
+                            Table of Contents
+                        </summary>
+                        <div className={`text-foreground/100 ${rightAlign ? 'mr-6' : 'ml-6'}`}>
+                            {createList(nestedList)}
+                        </div>
+                    </details>
+                ) : (
+                    createList(nestedList)
+                )}
             </div>
         </>
     )
