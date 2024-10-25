@@ -5,9 +5,5 @@ interface Props {
 }
 
 export default function SectionContainer({ children }: Props) {
-    return (
-        <section className="mx-auto ">
-            {children}
-        </section>
-    )
+    return <section className="mx-auto">{children}</section>
 }

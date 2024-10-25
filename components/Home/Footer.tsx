@@ -6,12 +6,12 @@ import Link from 'next/link'
 import { Dices, Shuffle } from 'lucide-react'
 const Home = () => {
     return (
-        <section className=" flex flex-col gap-16 ml-[calc(-50vw+50%+10px)] w-[calc(100vw-20px)] p-4 px-[16px] pt-[2em]">
+        <section className="ml-[calc(-50vw+50%+10px)] flex w-[calc(100vw-20px)] flex-col gap-16 p-4 px-[16px] pt-[2em]">
             <div className="w-100 py-4 opacity-50">
                 <div className="w-100 mx-0 my-[0.75em] h-[2px] bg-foreground"></div>
             </div>
             <ContactForm />
-            <div className="w-full ">
+            <div className="w-full">
                 <Bordered>
                     <div className="h-[300px]">
                         <div className="flex h-full w-full items-center justify-center">
@@ -27,7 +27,6 @@ const Home = () => {
             </div>
             <div className="flex w-full flex-row-reverse justify-between">
                 <div className="flex h-4 items-center gap-4">
-
                     <Link
                         href={'https://amrita.town/prev'}
                         className="text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
@@ -57,11 +56,11 @@ const Home = () => {
                     </Link>
                 </div>
                 <Link
-                        href={'https://amrita.town/'}
-                        className="h-full self-center text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
-                    >
-                        <p>Amrita.town</p>
-                    </Link>
+                    href={'https://amrita.town/'}
+                    className="h-full self-center text-sm font-medium uppercase text-primary hover:brightness-125 dark:hover:brightness-125"
+                >
+                    <p>Amrita.town</p>
+                </Link>
             </div>
         </section>
     )
