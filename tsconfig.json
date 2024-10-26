@@ -18,10 +18,10 @@
         "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-            "@/components/*": ["components/*"],
-            "@/data/*": ["data/*"],
-            "@/layouts/*": ["layouts/*"],
-            "@/css/*": ["css/*"],
+            "@/components/*": ["src/components/*"],
+            "@/data/*": ["src/data/*"],
+            "@/layouts/*": ["src/layouts/*"],
+            "@/css/*": ["src/css/*"],
             "@/scripts/*": ["scripts/*"],
             "contentlayer/generated": ["./.contentlayer/generated"]
         },

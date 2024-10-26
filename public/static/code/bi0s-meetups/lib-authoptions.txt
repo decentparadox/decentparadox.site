@@ -70,7 +70,7 @@ export const authOptions: AuthOptions = {
     colorScheme: "auto", // "auto" | "dark" | "light"
     brandColor: "#D6E9FF", // Hex color code
     logo: "https://bi0smeetup.in/logo.svg", // Absolute URL to image
-    buttonText: "#1f2021" // Hex color code
+    buttonText: "#1d1d1d" // Hex color code
   },
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
