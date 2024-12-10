@@ -21,7 +21,7 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
-import siteMetadata from './data/siteMetadata'
+import siteMetadata from './src/data/siteMetadata'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -60,7 +60,7 @@ function createTagCount(allBlogs) {
             })
         }
     })
-    writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+    writeFileSync('./src/app/tag-data.json', JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs) {
@@ -133,7 +133,7 @@ export const Authors = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-    contentDirPath: 'data',
+    contentDirPath: 'src/data',
     documentTypes: [Blog, Authors],
     mdx: {
         cwd: process.cwd(),
