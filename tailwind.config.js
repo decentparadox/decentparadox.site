@@ -1,6 +1,7 @@
 // @ts-check
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const { SiAccenture } = require('react-icons/si')
 
 /** @type {import("tailwindcss/types").Config } */
 module.exports = {
@@ -45,6 +46,7 @@ module.exports = {
                 ring: 'var(--ring)',
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
+
                 primary: {
                     DEFAULT: 'var(--primary)',
                     // DocSearch colors
@@ -70,7 +72,7 @@ module.exports = {
                     foreground: 'var(--muted-foreground)',
                 },
                 accent: {
-                    DEFAULT: '#E9EAE2',
+                    DEFAULT: '#9b99ff',
                     foreground: 'var(--accent-foreground)',
                 },
                 popover: {
@@ -96,11 +98,17 @@ module.exports = {
                     from: { height: 'var(--radix-accordion-content-height)' },
                     to: { height: 0 },
                 },
+                marquee: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
                 skeleton: 'skeleton 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                marquee: 'marquee 10s linear infinite',
+
             },
             typography: ({ theme }) => ({
                 DEFAULT: {

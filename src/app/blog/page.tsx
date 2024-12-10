@@ -21,7 +21,7 @@ export default function BlogPage() {
     }
 
     return (
-        <div className="font-krypton m-auto w-[calc(100%-64px)] divide-accent-foreground py-4 text-foreground dark:divide-accent">
+        <div className="font-krypton m-auto w-[calc(100%-64px)] divide-accent-foreground py-4 text-foreground dark:divide-foreground">
             <Navbar pageTitle="Blog" />
             <ListLayout
                 posts={posts}

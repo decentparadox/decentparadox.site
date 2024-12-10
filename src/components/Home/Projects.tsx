@@ -3,15 +3,7 @@ import { Skeleton } from '../shadcn/skeleton'
 import { useLanyard } from 'react-use-lanyard'
 import { useState } from 'react'
 import Link from 'next/link'
-/**
- * Home
- *
- * This component renders the home page of the website.
- *
- * It contains a short about section, a list of projects, and a divider.
- *
- * @returns {JSX.Element} The home page component.
- */
+
 type ProjectProp = {
     name: string
     imageSrc: string
@@ -72,21 +64,10 @@ const Home = () => {
                     <div className="about-col flex flex-col gap-4 text-justify">
                         <p className="opacity-75">(about me)</p>
                         <p>
-                            Hey, I'm Sasank Reddy, also known as "DecentParadox." I'm currently
-                            pursuing a degree in Computer Science at Amrita School of Engineering.
-                            I'm a creative designer and developer, and I occasionally participate in
-                            CTFs. I also enjoy creating challenges for CTFs.
+                            Hey, I'm Sasank Reddy, but you can call me "DecentParadox." I'm studying Computer Science at Amrita School of Engineering. I like designing and coding, and sometimes I play CTFs. I also have fun making challenges for CTFs.
                         </p>
                         <p>
-                            I am a student and as such, education and the process of acquiring
-                            knowledge is something I am very much interested in. My objective is to
-                            be a generalist. thinker, thus I am developing my problem-solving
-                            abilities on a daily basis in such fields as blockchain, application
-                            development, artificial intelligence and networking. I don&apos;t stick
-                            to a particular field; I am prepared in order to change and accept new
-                            tasks. Thus, as much as I do not have a sophisticated mission statement,
-                            that, the desire to acquire knowledge and be proficient in the acquired
-                            knowledge motivates me
+                            I'm a student who loves learning. I may not have a fancy mission, but my passion for gaining knowledge and mastering new skills keeps me going.
                         </p>
                     </div>
                 </div>

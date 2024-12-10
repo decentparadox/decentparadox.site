@@ -40,7 +40,7 @@ export default function PostLayout({
             <article>
                 <div>
                     <header>
-                        <div className="font-krypton space-y-1 border-b border-muted-foreground pb-10 text-center text-accent dark:border-muted">
+                        <div className="font-krypton space-y-1 border-b border-muted-foreground pb-10 text-center text-foreground dark:border-muted">
                             {/* <div className="w-full">
                                 <div className="relative -mx-6 mt-6 md:-mx-8">
                                     <div className="relative aspect-[1.91/1] w-full rounded-md">
@@ -65,7 +65,7 @@ export default function PostLayout({
                                     </dd>
                                 </div>
                             </dl>
-                            <div>
+                            <div className='text-accent'>
                                 <PageTitle>{title}</PageTitle>
                             </div>
                             {tags && (
@@ -128,13 +128,13 @@ export default function PostLayout({
                                 {/* <div className=" flex-1 toc not-prose">
                                     <TOCInline toc={toc} />
                                 </div> */}
-                                <div className="font-krypton w-full text-justify text-accent">
+                                <div className="font-krypton w-full text-justify text-foreground">
                                     {children}
                                 </div>
                             </div>
                         </div>
                         <footer>
-                            <div className="font-krypton flex flex-col text-sm font-medium text-accent opacity-75 sm:flex-row sm:justify-between sm:text-base">
+                            <div className="font-krypton flex flex-col text-sm font-medium text-foreground opacity-75 sm:flex-row sm:justify-between sm:text-base">
                                 {prev && prev.path && (
                                     <div className="pt-4 xl:pt-8">
                                         <Link

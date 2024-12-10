@@ -4,6 +4,7 @@ import Projects from 'src/components/Home/Projects'
 import Footer from 'src/components/Home/Footer'
 import LoadingScreen from 'src/components/LoadingScreen'
 import { useState, useEffect } from 'react'
+import RevampBanner from '@/components/Banner'
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -18,6 +19,7 @@ export default function Home() {
     }
     return (
         <div className="font-krypton divide-accent-foreground uppercase text-foreground dark:divide-accent fill-foreground">
+            <RevampBanner />
             <Hero />
             <Projects />
             <Footer />

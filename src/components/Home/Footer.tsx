@@ -15,10 +15,10 @@ const Home = () => {
                 <Bordered>
                     <div className="h-[300px]">
                         <div className="flex h-full w-full items-center justify-center">
-                            <h1 className="font-vaxen absolute text-[64px] sm:text-[124px] md:text-[150px] xl:text-[240px] 2xl:text-[300px]">
+                            <h1 className="font-vaxen absolute text-[64px] sm:text-[124px] text-accent md:text-[150px] xl:text-[240px] 2xl:text-[300px]">
                                 DDOX
                             </h1>
-                            <p className="font-kleemax fg-accent z-[2] text-[16px] text-accent sm:text-[32px] md:text-[40px] xl:text-[64px] 2xl:text-[76px]">
+                            <p className="font-kleemax fg-accent z-[2] text-[16px] text-foreground sm:text-[32px] md:text-[40px] xl:text-[64px] 2xl:text-[76px]">
                                 SASANK REDDY
                             </p>
                         </div>
