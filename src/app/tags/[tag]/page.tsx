@@ -1,6 +1,6 @@
 import siteMetadata from 'src/data/siteMetadata'
 import ListLayout from 'src/layouts/ListLayout'
-import { genPageMetadata } from 'src/src/app/seo'
+import { genPageMetadata } from 'src/app/seo'
 import tagData from 'src/app/tag-data.json'
 import { allBlogs } from 'contentlayer/generated'
 import { slug } from 'github-slugger'
