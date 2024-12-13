@@ -12,7 +12,7 @@ import 'react-resizable/css/styles.css'
 import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 import { ThemeProviders } from './theme-providers'
-
+import SmoothScrolling from '@/components/SmoothScrolling'
 const font = JetBrains_Mono({
     subsets: ['latin'],
     display: 'swap',
@@ -90,6 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#E9D3B6" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <body className="bg-background text-black antialiased dark:text-white">
+                <SmoothScrolling>
                 <ThemeProviders>
                     <Analytics />
                     <SectionContainer>
@@ -101,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </SectionContainer>
                 </ThemeProviders>
                 <GoogleTagManager gtmId="GTM-PXJS8VXB" />
+            </SmoothScrolling>
             </body>
         </html>
     )
