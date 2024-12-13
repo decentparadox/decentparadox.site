@@ -1,6 +1,6 @@
 import SectionContainer from 'src/components/SectionContainer'
 import siteMetadata from 'src/data/siteMetadata'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from "@vercel/analytics/react"
 import 'src/css/tailwind.css'
 import { ReactLenis } from '@studio-freight/react-lenis'
 import { Metadata } from 'next'
@@ -92,11 +92,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className="bg-background text-black antialiased dark:text-white">
                 <SmoothScrolling>
                 <ThemeProviders>
-                    <Analytics />
                     <SectionContainer>
                         <div className="noise box-border flex h-full flex-col font-sans">
                             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                                 {children}
+                                <Analytics />
                             </SearchProvider>
                         </div>
                     </SectionContainer>
