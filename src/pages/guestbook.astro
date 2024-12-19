@@ -1,0 +1,16 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Container from '@/components/Container.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import GuestbookComponent from '@/components/Guestbook'
+---
+
+<Layout title="About" description={SITE.DESCRIPTION}>
+  <Container class="flex flex-col gap-y-6">
+    <Breadcrumbs items={[{ label: 'Guestbook', icon: 'lucide:signature' }]} />
+
+    <GuestbookComponent client:load/>
+  </Container>
+</Layout>

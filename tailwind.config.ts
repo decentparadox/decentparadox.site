@@ -9,6 +9,9 @@ const config: Config = {
       fontFamily: {
         sans: ['Geist', ...defaultTheme.fontFamily.sans],
         mono: ['Geist Mono', ...defaultTheme.fontFamily.mono],
+        kleemax: ['Kleemax', ...defaultTheme.fontFamily.sans],
+        vaxen: ['Vaxen', ...defaultTheme.fontFamily.sans],
+        krypton: ['Krypton', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         background: 'hsl(var(--background))',

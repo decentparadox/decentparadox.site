@@ -14,17 +14,16 @@ const projects = await getCollection('projects')
     <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
 
     <section>
-      <div class="min-w-full">
-        <h1 class="mb-4 text-3xl font-bold">Some more about us</h1>
-        <p class="prose prose-neutral mb-8 dark:prose-invert">
-          {SITE.TITLE} is an opinionated, no-frills static blogging template built
-          with Astro.
+      <div class="min-w-full font-mono">
+        <h1 class="mb-4 text-3xl font-bold font-krypton">about me</h1>
+        <p class=" prose-neutral mb-8 dark:prose-invert">
+          Hey, I'm Sasank Reddy, also known as "decentparadox." I'm currently a student pursuing a degree in Computer Science with a focus on Artificial Intelligence at Amrita School of Engineering, Bangalore. During the day, I work as a graphic and UI/UX designer, and I've got two years of experience under my belt. I'm also into tech stuff like reverse engineering, game hacking, and web development. On weekends, you'll find me diving into Capture The Flag (CTF) challenges.
+        </p>
+        <p>
+          I'm all about learning and growth. My goal is to become a versatile problem solver, so I'm constantly improving my skills in areas like blockchain, app development, machine learning, and networking. I believe in being well-prepared before taking on any projects. When I'm not busy with tech, I love reading books and manga. It's my way of staying creative and inspired
         </p>
 
-        <h2 class="mb-4 text-2xl font-semibold">Our Projects</h2>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => <ProjectCard project={project} />)}
-        </div>
+        
       </div>
     </section>
   </Container>
